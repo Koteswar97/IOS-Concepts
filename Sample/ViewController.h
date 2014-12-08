@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "service1.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UIImagePickerControllerDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
+- (IBAction)Fbpost:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageview2;
+- (IBAction)chooseImg:(id)sender;
+@property(strong, nonatomic) NSData *imagetoshare;
+@property(strong, nonatomic)service1 *serv1;
+
+
 
 @end
